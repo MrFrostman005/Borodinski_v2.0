@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "devDependencies": {
+    "sass": "^1.77.8",
+    "vite-plugin-sass": "^0.1.0"
+  },
+  "dependencies": {
+    "vite": "^5.3.5"
+  }
+}

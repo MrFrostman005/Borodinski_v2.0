@@ -1,3 +1,4 @@
+@import '/variables.scss';
 
 .user-list__login {
     position: relative;
@@ -20,6 +21,10 @@
     height: 16px;
 
     opacity: 0.3;
+
+    polygon {
+        fill: #ffffff;
+    }
 
 }
 

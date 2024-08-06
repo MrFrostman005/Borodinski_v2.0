@@ -1,0 +1,156 @@
+
+.rewiews {
+    padding-top: 30px;
+    color: #000000;
+    text-align: center;
+
+    width: 320px;
+    margin: 0 auto;
+
+    background-color: #ffffff;
+
+    color: #000000;
+
+    position: relative;
+
+    &::before,
+    &::after {
+        content: "";
+
+        position: absolute;
+
+        width: 163px;
+        height: 35px;
+
+        bottom: -15px;
+
+        background-color: #ffffff;
+        
+    }
+
+    &::before {
+        left: 2px;
+        transform: rotate(10deg);
+    }
+
+    &::after {
+        right: 2px;
+        transform: rotate(-10deg);
+    }
+
+    &__list {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    &__item {
+        display: flex;
+
+        position: relative;
+        overflow: hidden;
+
+        margin: 0;
+    }
+
+    &__wrapper {
+        position: relative;
+        overflow: hidden;
+        text-align: left;
+    }
+
+    &__toggles {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        margin-top: 10px;
+        
+        .slider2__toggle {
+            width: 8px;
+            height: 8px;
+
+            font-size: 0;
+
+            margin: 15px 12px;
+            padding: 0;
+
+            background-color: transparent;
+            border: 1px solid #000000;
+            cursor: pointer;
+            outline: none;
+
+            transform: rotate(45deg);
+
+            &.active {
+                background-color: #000000;
+            }
+        }
+    }
+
+    &__title {
+        margin: 0;
+
+        text-align: center;
+
+        font-size: 30px;
+        line-height: 30px;
+
+        text-transform: uppercase;
+    }
+
+    &__write {
+        display: none;
+    }
+
+    &__description {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    &__prev,
+    &__next {
+        display: none;
+    }
+
+    &__author-name {
+        font-size: 24px;
+        line-height: 27px;
+
+        font-weight: bold;
+        font-style: normal;
+
+        text-align: left;
+
+    }
+
+    &__author-picture {
+        padding-right: 20px;
+        margin: 0;
+        margin-top: 10px;
+    }
+
+    &__text {
+        margin: 0;
+        margin-top: 10px;
+
+        font-size: 18px;
+        line-height: 27px;
+    }
+        
+}
+
+.slider {
+    &__wrapper {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    &__item {
+        min-width: 100%;
+        box-sizing: border-box;
+        padding: 20px;
+        padding-bottom: 0;
+    }
+}
