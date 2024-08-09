@@ -1,3 +1,5 @@
+@import '/variables.scss';
+
 .page-footer{
     width: 320px;
     margin: 0 auto;
@@ -109,4 +111,140 @@
 
         border: 1px solid #353535;
     }
+}
+
+@media (min-width: $tablet-width) {
+    .page-footer {
+        width: 100%;
+        max-width: 968px;
+        background-color: #292929;
+
+        &__wrapper {
+            width: 84%;
+            margin: 0 auto;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            text-align: left;
+            flex-wrap: wrap;
+        }
+
+        &__contacts {
+            order: 1;
+            text-align: left;
+            width: auto;
+            margin: 0;
+            flex: 1; // Занимает пространство по левому краю
+        }
+
+        &__copyright {
+            order: 2;
+            text-align: right;
+            width: auto;
+            margin: 0;
+            flex: 1; // Занимает пространство по правому краю
+        }
+
+        &__social {
+            order: 3;
+            text-align: center;
+            width: 100%;
+            margin: 20px 0 0;
+        }
+
+    }
+
+    .copyright {
+        &__link {
+            width: 160px;
+            margin-right: 0;
+        }
+
+        &__text {
+            margin-right: 40px;
+            margin-top: 0;
+        }
+    }
+
+    .br {
+        display: none;
+    }
+
+    .contacts {
+        &__phone {
+            flex-direction: row;
+            justify-content: flex-start;
+
+            border: none;
+            margin: 0;
+        }
+
+        &__phone-mobile {
+            display: block;
+            margin-right: 2px;
+        }
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .page-footer {
+        max-width: 1200px;
+
+        &__wrapper {
+            flex-wrap: nowrap;
+            width: 960px;
+        }
+
+        &__social {
+            order: 2;
+            width: 162px;
+        }
+
+        &__copyright {
+            order: 3;
+        }
+    }
+
+    .social {
+
+        margin-top: 0;
+
+        &__title {
+            display: block;
+        }
+
+        &__list {
+            margin-top: 10px;
+        }
+
+        &__item {
+            width: 49px;
+            height: 49px;
+            flex: none;
+        }
+
+        &__link .vk-icon {
+            width: 15px;
+            height: 17px;
+        }
+
+        &__link .fb-icon {
+            width: 10px;
+            height: 21px;
+        }
+
+        &__link .insta-icon {
+            width: 19px;
+            height: 19px;
+        }
+
+    }
+
+    .contacts {
+        &__phone {
+            height: auto;
+        }
+    }
+
 }

@@ -1,3 +1,26 @@
+@import '/variables.scss';
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 auto;
+
+    width: 280px;
+    height: 50px;
+
+    border: 1px solid #e5ddd5;
+
+    text-decoration: none;
+    color: #000000;
+
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+
 .news {
     width: 320px;
     margin: 0 auto;
@@ -41,6 +64,9 @@
 
         padding: 15px 0;
 
+        &:last-child {
+            display: none;
+        }
     }
 
     &__text {
@@ -104,24 +130,104 @@
         line-height: 30px;
     }
 
-    &__to-all {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    &__to-all--top {
+        display: none;
+    }
+}
 
+
+@media (min-width: $tablet-width) {
+    
+    .button {
+        width: 160px;
+
+        margin: 0;
+    }
+    
+    .news {
+        width: 100%;
+        max-width: 968px;
         margin: 0 auto;
 
-        width: 280px;
-        height: 50px;
+        text-align: left;
 
-        border: 1px solid #e5ddd5;
+        &__to-all--top {
+            display: flex;
+        }
 
-        text-decoration: none;
-        color: #000000;
+        &__to-all--bottom {
+            display: none;
+        }
 
-        font-size: 18px;
-        font-weight: bold;
-        line-height: 24px;
-        text-transform: uppercase;
+        &__title--wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            width: 84%;
+
+            margin: 0 auto;
+
+            padding-bottom: 35px;
+        }
+
+        &__title {
+            font-size: 40px;
+            line-height: 30px;
+
+            padding: 0;
+        }
+
+        &__list {
+            width: 84%;
+            margin: 0 auto;
+
+            display: flex;
+        }
+
+        &__item {
+            flex: 1;
+
+            padding-right: 45px;
+
+        }
+
+        &__text {
+            & span {
+                display: none;
+            }
+        }
+        
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .news {
+        width: 100%;
+        max-width: 1200px;
+        padding-top: 130px;
+
+        &__wrapper {
+            width: 960px;
+            margin: 0 auto;
+        }
+
+        &__list {
+            width: 100%;
+        }
+
+        &__item {
+            &:last-child {
+                display: flex;
+            }
+        }
+
+        &__title {
+            padding-left: 70px;
+        }
+
+        &__title--wrapper {
+            width: 100%;
+        }
     }
 }

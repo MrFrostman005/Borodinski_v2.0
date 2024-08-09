@@ -26,6 +26,12 @@ body {
     color: #f7f4f1;
     font-style: normal;
     background-color: $bg-darkgrey;
+
+    @media (min-width: $tablet-width) {
+         
+        background-color: #353535;
+        
+    }
 }
  
 // img {
