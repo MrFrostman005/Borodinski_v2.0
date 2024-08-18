@@ -147,7 +147,6 @@
     
     .rewiews {
         width: 100%;
-        max-width: 968px;
         margin: 0 auto;
         padding-top: 38px;
 
@@ -240,6 +239,7 @@
 
         position: relative;
         width: calc(96% - 100px); /* 100px для кнопок по бокам */
+        max-width: 84%;
         margin: 0 auto;
         overflow: hidden;
 
