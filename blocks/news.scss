@@ -142,6 +142,16 @@
         width: 160px;
 
         margin: 0;
+
+        &:hover {
+            border-color: #d5c9bd;
+        }
+
+        &:active {
+            background-color: #d5c9bd;
+
+            color: #a99f95;
+        }
     }
     
     .news {

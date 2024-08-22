@@ -233,6 +233,16 @@
         font-weight: bold;
         line-height: 24px;
         text-transform: uppercase;
+
+        &:hover {
+            border-color: #d5c9bd;
+        }
+
+        &:active {
+            background-color: #d5c9bd;
+
+            color: #a99f95;
+        }
     }
 
     .slider2 {
